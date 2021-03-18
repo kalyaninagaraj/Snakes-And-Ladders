@@ -10,8 +10,8 @@ discrete-time Markov chain with a single absorbing state, and calculate
 5. the probability that a player completes the game in k moves, k = 1, 2, 3, ...
 
 ## Choice Of Board
-1. For the [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg), input data is stored in `numberofcells.tx`, `snakes.txt`, and `ladders.txt`.
-2. A [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png) uses `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`/
+1. For the [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg), use data files `numberofcells.tx`, `snakes.txt`, and `ladders.txt`.
+2. Data for a [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png) is saved to `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`. 
 
 ## Online (mostly) resources
 ### Lecture notes, videos, and book chapters:
