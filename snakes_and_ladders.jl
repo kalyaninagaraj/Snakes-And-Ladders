@@ -194,15 +194,12 @@ for n=1:300
     pmf_phasetypedist[n] = transpose(tau) * T^(n-1) * T0;
     cdf_phasetypedist[n] = 1 - transpose(tau) * T^n * ones(size(T,1))
 end
-
-
 using Plots
 cdfplot = Plots.plot(0:300, [0;cdf_phasetypedist], linetype=:steppre, title = "Discrete Phase-Type Distribution", label = "", lw = 1)
 xlabel!("Number of moves to complete game")
 ylabel!("Cummulative density function")
 display(cdfplot)
 savefig("Plots/cdf_punitive.pdf")
-
 pmfplot = Plots.scatter(1:300, pmf_phasetypedist, title = "Discrete Phase-Type Distribution", label = "", lw = 1)
 xlabel!("Number of moves to complete game")
 ylabel!("Probability mass function")
