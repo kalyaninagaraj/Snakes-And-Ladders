@@ -9,7 +9,7 @@ discrete-time Markov chain with a single absorbing state, and calculates
 [3] the least number of moves (turns) to complete the game,
 [4] the most likely path (or, sequence of board moves) to complete the game, and
 [5] the probability that a player completes the game in k moves, k = 1, 2, ...
-    (to be completed)
+
 
 CHOICE OF BOARD
 ===============
