@@ -9,6 +9,8 @@ discrete-time Markov chain with a single absorbing state, and calculate
 4. the most likely path (or, sequence of board moves) to complete the game, and
 5. the probability that a player completes the game in k moves, k = 1, 2, 3, ...
 
+We will assume that the game begins from a initial position (and not position 1 on the board) that we shall call *cell 0*. The player rolls a fair die before each move, and game is said to end when the player lands on *cell 100*. 
+
 ## Choice Of Board
 1. For the [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg), use data files `numberofcells.txt`, `snakes.txt`, and `ladders.txt`.
 2. Data for a [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png) is saved to `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`. 
@@ -26,7 +28,7 @@ One such set of moves is [0, 6, 26, 32, 38, 77, 100].
 The most likely path from cell 0 to cell 100 is [0, 6, 26, 32, 38, 77, 100].
 This path requires 6 moves and is achieved with probility 2.1433470507544607e-5.
 ```
-
+Time to complete the game follows a discrete phase-type distribution, whose mass function and density are plotted 
 ## Online (mostly) resources
 ### Lecture notes, videos, and book chapters:
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6
