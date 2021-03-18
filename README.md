@@ -13,6 +13,20 @@ discrete-time Markov chain with a single absorbing state, and calculate
 1. For the [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg), use data files `numberofcells.txt`, `snakes.txt`, and `ladders.txt`.
 2. Data for a [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png) is saved to `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`. 
 
+## Example
+Running `snakes_and_ladders.jl` for the punitive board will generate the following output
+
+```
+Mean number of moves to complete the game = 54.4735849242718.
+
+The game can be completed in a minimum of 6.0 moves.
+One such set of moves is [0, 6, 26, 32, 38, 77, 100].
+
+
+The most likely path from cell 0 to cell 100 is [0, 6, 26, 32, 38, 77, 100].
+This path requires 6 moves and is achieved with probility 2.1433470507544607e-5.
+```
+
 ## Online (mostly) resources
 ### Lecture notes, videos, and book chapters:
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6

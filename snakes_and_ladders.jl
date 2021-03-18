@@ -63,10 +63,10 @@ num_cells = readdlm("Data/numberofcells.txt", Int64);
 num_states = num_cells[1] + 1;
 # First column of s  : locations of snake heads
 # Second column of s : locations of snake tails
-s = readdlm("Data/snakes_vintage.txt", Int64);
+s = readdlm("Data/snakes_punitive.txt", Int64);
 # First column of l  : location of bottom of ladder
 # Second column of l : location of top of ladder
-l = readdlm("Data/ladders_vintage.txt", Int64);
+l = readdlm("Data/ladders_punitive.txt", Int64);
 # Create a dictionary whose keys are path sources and whose corresponding
 # values are path destination implied by the snakes and ladders
 snakes  = [ [ s[i,1] s[i,2] ] for i in 1:size(s,1)]
@@ -199,10 +199,12 @@ end
 using Plots
 cdfplot = Plots.plot(0:300, [0;cdf_phasetypedist], linetype=:steppre, title = "Discrete Phase-Type Distribution", label = "", lw = 1)
 xlabel!("Number of moves to complete game")
-ylabel!("CDF")
+ylabel!("Cummulative density function")
 display(cdfplot)
+savefig("Plots/cdf_punitive.pdf")
 
 pmfplot = Plots.scatter(1:300, pmf_phasetypedist, title = "Discrete Phase-Type Distribution", label = "", lw = 1)
 xlabel!("Number of moves to complete game")
-ylabel!("PMF")
+ylabel!("Probability mass function")
 display(pmfplot)
+savefig("Plots/pmf_punitive.pdf")
