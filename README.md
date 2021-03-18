@@ -35,15 +35,6 @@ The random variable representing the number of moves to complete the game (start
 ## Resources
 ### Lecture notes, videos, and book chapters:
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6
-2. Introductionto Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11 [[pdf](https://math.dartmouth.edu/~prob/prob/prob.pdf)]
-3. Lecture on Expected Time to Absorption by John Tsitsiklis, RES.6-012 Introduction to Probability. Spring 2018. Massachusetts Institute of Technology: MIT OpenCourseWare,  [[video](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/)]
+2. Introduction to Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11 [[pdf](https://math.dartmouth.edu/~prob/prob/prob.pdf)]
+3. Lecture on Expected Time to Absorption by John Tsitsiklis, RES.6-012 Introduction to Probability. Spring 2018. Massachusetts Institute of Technology: MIT OpenCourseWare  [[video](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/)]
 4. Lecture notes to Professor Bo Friis Nielsen's Course 02407 Stochastic Processes, Fall 2020 [[pdf](http://www2.imm.dtu.dk/courses/02407/lectnotes/ftf.pdf)]
-
-### Online forums
-1. https://math.stackexchange.com/questions/691494/expected-number-of-steps-between-states-in-a-markov-chain
-2. https://www.quora.com/What-is-the-expected-number-of-moves-required-to-finish-a-snakes-and-ladders-game
-3. https://en.wikipedia.org/wiki/Discrete_phase-type_distribution
-4. https://math.stackexchange.com/questions/1695191/markov-chain-snakes-and-ladders
-5. https://stackoverflow.com/questions/38894477/find-the-path-with-the-max-likelihood-between-two-vertices-in-markov-model
-6. https://mathematica.stackexchange.com/questions/19457/finding-the-likeliest-path-in-a-markov-process
-7. https://math.stackexchange.com/questions/3281928/what-is-the-distribution-of-time-to-absorption-for-an-absorbing-markov-chain
