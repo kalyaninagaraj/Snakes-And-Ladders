@@ -59,14 +59,14 @@ using DelimitedFiles
 
 # 2. READ BOARD GAME DATA FROM FILE, CREATE A DICTIONARY
 # ------------------------------------------------------
-num_cells = readdlm("numberofcells.txt", Int64);
+num_cells = readdlm("Data/numberofcells.txt", Int64);
 num_states = num_cells[1] + 1;
 # First column of s  : locations of snake heads
 # Second column of s : locations of snake tails
-s = readdlm("snakes_vintage.txt", Int64);
+s = readdlm("Data/snakes_vintage.txt", Int64);
 # First column of l  : location of bottom of ladder
 # Second column of l : location of top of ladder
-l = readdlm("ladders_vintage.txt", Int64);
+l = readdlm("Data/ladders_vintage.txt", Int64);
 # Create a dictionary whose keys are path sources and whose corresponding
 # values are path destination implied by the snakes and ladders
 snakes  = [ [ s[i,1] s[i,2] ] for i in 1:size(s,1)]
