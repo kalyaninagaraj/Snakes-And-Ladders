@@ -1,7 +1,6 @@
 
 # <img src="https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/dice.svg" card_color="#222222" width="50" height="50" style="vertical-align:bottom"/> Snakes And Ladders
-Julia code to analyze the single-player game of snakes and ladders as a
-discrete-time Markov chain with a single absorbing state, and calculate
+The Julia code `snakes_and_ladders.jl` analyzes the single-player game of snakes and ladders as a discrete-time Markov chain with a single absorbing state, and calculates
 1. the expected number of turns to complete a game,
 2. the probability that a player ever moves to cell j, given that she started
     in cell j,
@@ -9,8 +8,7 @@ discrete-time Markov chain with a single absorbing state, and calculate
 4. the most likely path (or, sequence of board moves) to complete the game, and
 5. the probability that a player completes the game in k moves, k = 1, 2, 3, ...
 
-
-We will assume that the game begins from a initial position (and not first square on the board) that we shall call *cell 0*. The player rolls a fair die before each move, and game is said to end when the player lands on the last square (or *cell 100*). 
+We assume that the game begins from a initial position (and not the first square on the board) that we call *cell 0*. A player rolls a fair die before each move, and game is said to end when the player lands on the last square (or *cell 100*). 
 
 In keeping with tradition, a player on one of the squares 94 to 99 must roll a exact number to land on the last square, or remain in the same position if she overshoots 100. 
 
@@ -35,14 +33,11 @@ The random variable representing the number of moves to complete the game (start
 
 
 ## Resources
-Most are available online, and are freely accessible. 
-
 ### Lecture notes, videos, and book chapters:
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6
-2. Introductionto Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11
-    https://math.dartmouth.edu/~prob/prob/prob.pdf
-3. https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/
-4. http://www2.imm.dtu.dk/courses/02407/lectnotes/ftf.pdf
+2. Introductionto Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11 [[pdf](https://math.dartmouth.edu/~prob/prob/prob.pdf)]
+3. Lecture on Expected Time to Absorption by John Tsitsiklis, RES.6-012 Introduction to Probability. Spring 2018. Massachusetts Institute of Technology: MIT OpenCourseWare,  [[video](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/)]
+4. Lecture notes to Professor Bo Friis Nielsen's Course 02407 Stochastic Processes, Fall 2020 [[pdf](http://www2.imm.dtu.dk/courses/02407/lectnotes/ftf.pdf)]
 
 ### Online forums
 1. https://math.stackexchange.com/questions/691494/expected-number-of-steps-between-states-in-a-markov-chain
