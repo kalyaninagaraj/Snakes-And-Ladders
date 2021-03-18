@@ -31,11 +31,12 @@ One such set of moves is [0, 6, 26, 32, 38, 77, 100].
 The most likely path from cell 0 to cell 100 is [0, 6, 26, 32, 38, 77, 100].
 This path requires 6 moves and is achieved with probility 2.1433470507544607e-5.
 ```
-Time to complete the game follows a discrete phase-type distribution, whose mass function and density are saved under `Plots`. 
+The random variable representing the number of moves to complete the game (starting from cell 0) follows a discrete phase-type distribution, whose probability mass function and density are saved under `Plots`. 
 
-![Alt text](Plots/cdf_punitive.pdf)
 
-## Online (mostly) resources
+## Resources
+Most are available online, and are freely accessible. 
+
 ### Lecture notes, videos, and book chapters:
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6
 2. Introductionto Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11
