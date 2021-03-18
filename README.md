@@ -37,4 +37,4 @@ The random variable representing the number of moves to complete the game (start
 1. Introduction to Probability Models, 11th Ed., Sheldon M. Ross, Section 4.6
 2. Introduction to Probability, 2nd Ed., Charles M. Grinstead and J. Laurie Snell, Chapter 11 [[pdf](https://math.dartmouth.edu/~prob/prob/prob.pdf)]
 3. Lecture on Expected Time to Absorption by John Tsitsiklis, RES.6-012 Introduction to Probability. Spring 2018. Massachusetts Institute of Technology: MIT OpenCourseWare  [[video](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/)]
-4. Lecture notes to Professor Bo Friis Nielsen's Course 02407 Stochastic Processes, Fall 2020 [[pdf](http://www2.imm.dtu.dk/courses/02407/lectnotes/ftf.pdf)]
+4. Lecture notes for Professor Bo Friis Nielsen's course on Stochastic Processes, DTU Compute, Denmark, Course 02407, Fall 2020 [[pdf](http://www2.imm.dtu.dk/courses/02407/lectnotes/ftf.pdf)]
