@@ -10,10 +10,10 @@ discrete-time Markov chain with a single absorbing state, and calculate
 5. the probability that a player completes the game in k moves, k = 1, 2, 3, ...
 
 ## Choice Of Board
-1. [The Milton Bradley version] (https://en.wikipedia.org/wiki/File:Cnl03.jpg)
+1. The [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg)
    Use data files: numberofcells.tx, snakes.txt, ladders.txt
 
-2. [A highly punitive version] (https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png)
+2. A [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png)
    Use data files: numberofcells.txt, snakes_vintage.txt, ladders_vintage.txt
 
 ## Online (mostly) resources
