@@ -14,7 +14,7 @@ In keeping with tradition, a player on one of the squares 94 to 99 must roll a e
 
 ## Choice Of Board
 1. For the [Milton Bradley version](https://en.wikipedia.org/wiki/File:Cnl03.jpg), use data files `numberofcells.txt`, `snakes.txt`, and `ladders.txt`.
-2. Data for a [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png) is saved to `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`. 
+2. Data for this [highly punitive version](https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png)  is saved to `numberofcells.txt`, `snakes_punitive.txt`, and `ladders_punitive.txt`. 
 
 ## Example
 Running `snakes_and_ladders.jl` for the punitive board will generate the following output
