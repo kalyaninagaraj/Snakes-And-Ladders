@@ -6,7 +6,7 @@ The Julia code `snakes_and_ladders.jl` analyzes the single-player game of snakes
     in cell `j`,
 3. the least number of moves (turns) to complete the game,
 4. the most likely path (or, sequence of board moves) to complete the game, and
-5. the probability that a player completes the game in exactly `k` moves, where k  equals 1, 2, 3, and so on. 
+5. the probability that a player completes the game in exactly `k` moves, where $k$  equals 1, 2, 3, and so on. 
 
 We assume that the game begins from a initial position (and not the first square on the board) that we call *cell 0*. A player rolls a fair die before each move, and game is said to end when the player lands on the last square (or *cell 100*). 
 
