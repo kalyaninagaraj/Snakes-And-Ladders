@@ -4,8 +4,8 @@ OBJECTIVE
 This code anayzes the single-player game of snakes and ladders as a
 discrete-time Markov chain with a single absorbing state, and calculates
 [1] the expected number of turns to complete a game,
-[2] the probability that a player ever moves to cell j, given that she started
-    in cell j,
+[2] the probability that a player ever moves to square j, given that she started
+    in square j,
 [3] the least number of moves (turns) to complete the game,
 [4] the most likely path (or, sequence of board moves) to complete the game, and
 [5] the probability that a player completes the game in k moves, k = 1, 2, ...
@@ -14,10 +14,10 @@ discrete-time Markov chain with a single absorbing state, and calculates
 CHOICE OF BOARD
 ===============
 [1] https://en.wikipedia.org/wiki/File:Cnl03.jpg
-Input files: numberofcells.tx, snakes.txt, ladders.txt
+Input files: numberofsquares.tx, snakes.txt, ladders.txt
 
 [2] https://www.etsy.com/listing/764625917/snakes-ladders-vintage-game-board-png
-Input files: numberofcells.txt, snakes_vintage.txt, ladders_vintage.txt
+Input files: numberofsquares.txt, snakes_vintage.txt, ladders_vintage.txt
 
 
 RESOURCES
@@ -59,8 +59,8 @@ using DelimitedFiles
 
 # 2. READ BOARD GAME DATA FROM FILE, CREATE A DICTIONARY
 # ------------------------------------------------------
-num_cells = readdlm("Data/numberofcells.txt", Int64);
-num_states = num_cells[1] + 1;
+num_squares = readdlm("Data/numberofsquares.txt", Int64);
+num_states = num_squares[1] + 1;
 # First column of s  : locations of snake heads
 # Second column of s : locations of snake tails
 s = readdlm("Data/snakes_punitive.txt", Int64);
@@ -79,7 +79,7 @@ merge!(dictJumps, Dict([sn[1] => sn[2] for sn in snakes]))
 # ---------------------------------------------------------------
 P = zeros(num_states, num_states)  # Initialize a 101 X 101 1-step transition
                                    # probability matrix
-                                   # The game begins from cell 0
+                                   # The game begins from square 0
 for k = 1:(num_states-1)-5   # Loops from 1 to 95
    for j = k+1:k+6           # Fill in the transition probs. for a fair die
       P[k,j] = 1/6
@@ -87,19 +87,19 @@ for k = 1:(num_states-1)-5   # Loops from 1 to 95
 end
 for k = (num_states-1)-4:num_states    # Loops from 96 to 101
                                        # Player must roll an exact number to
-                                       # reach cell 100
+                                       # reach square 100
    for j = k+1:num_states
       P[k,j] = 1/6
    end
-   P[k,k] = (k + 6 - num_states)/6  # If player overshoots cell 100, she remains
-                                    # in cell k with probability (k+6-101)/6
+   P[k,k] = (k + 6 - num_states)/6  # If player overshoots square 100, she remains
+                                    # in square k with probability (k+6-101)/6
 end
 # Now, adjust the transition matrix to account for jumps in position due snakes
 # or ladders
 for k in keys(dictJumps)
    P[:, dictJumps[k]+1] += P[:, k+1]
 end
-# Notice that P[i, j] = 0 if either cell i or cell j has a snake's head or the
+# Notice that P[i, j] = 0 if either square i or square j has a snake's head or the
 # bottom of a ladder. So we can safely delete columns and rows corresponding to
 # the start of "jumps", without affecting our analysis.
 # This matrix truncation (naturally) reduces the size of the P,
@@ -117,7 +117,7 @@ P = P[setdiff(collect(1:num_states), collect(keys(dictJumps)) .+ 1),
 #      0 1]
 # Remove the last row and column to get the non-singular matrix T.
 # The expected number of moves to complete the game (i.e., absorption times),
-# when starting from cells 0 to 99 (minus the cells that were removed while
+# when starting from squares 0 to 99 (minus the squares that were removed while
 # truncating P), are given by E[Time] = inv(I - P) * vec(1).
 T  = P[1:end-1, 1:end-1]
 N  = size(T, 1)
@@ -166,19 +166,19 @@ for i = 1:size(P,1)         # Loop to add an edge whenever trans. prob P_ij>0
    end
 end
 r1 = dijkstra_shortest_paths(g, 0) # Find smallest number of moves to go from
-                                   # cell 0 to cells 0, 1, 2, ..., 100
+                                   # square 0 to squares 0, 1, 2, ..., 100
                                    # All edge weights equal 1
 r2 = dijkstra_shortest_paths(g, dists, 0) # Find the most likely path from
-                                          # cell 0 to cells 0, 1, 2, ... 100
+                                          # square 0 to squares 0, 1, 2, ... 100
                                           # when edge weights = - log(P_ij)
-# Enumerate the shortest paths from cell 0 to all other vertices:
+# Enumerate the shortest paths from square 0 to all other vertices:
 enpath_1 = enumerate_paths(vertices(g), r1.parent_indices)
 enpath_2 = enumerate_paths(vertices(g), r2.parent_indices)
 # When all edge weights equal one:
 println("\nThe game can be completed in a minimum of ", r1.dists[end], " moves.")
 println("One such set of moves is ", enpath_1[end], ".\n")
 # When edge weights equal negative log of one-step transition probabilities:
-println("\nThe most likely path from cell 0 to cell ", num_states-1, " is ", enpath_2[end], ".")
+println("\nThe most likely path from square 0 to square ", num_states-1, " is ", enpath_2[end], ".")
 println("This path requires ", length(enpath_2[end])-1,
         " moves and is achieved with probility ", exp(-r2.dists[end]), ".")
 
