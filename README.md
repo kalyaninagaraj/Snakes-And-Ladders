@@ -1,12 +1,12 @@
 
 # <img src="https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/dice.svg" card_color="#222222" width="50" height="50" style="vertical-align:bottom"/> Snakes And Ladders
 The Julia code `snakes_and_ladders.jl` analyzes the single-player game of snakes and ladders as a discrete-time Markov chain with a single absorbing state, and calculates
-1. the expected number of turns to complete a game,
-2. the probability that a player ever moves to cell j, given that she started
-    in cell j,
+1. the expected number of turns till the game finishes,
+2. the probability that a player ever moves to a cell `i`, given that she started
+    in cell `j`,
 3. the least number of moves (turns) to complete the game,
 4. the most likely path (or, sequence of board moves) to complete the game, and
-5. the probability that a player completes the game in k moves, k = 1, 2, 3, ...
+5. the probability that a player completes the game in exactly `k` moves, where k  equals 1, 2, 3, and so on. 
 
 We assume that the game begins from a initial position (and not the first square on the board) that we call *cell 0*. A player rolls a fair die before each move, and game is said to end when the player lands on the last square (or *cell 100*). 
 
