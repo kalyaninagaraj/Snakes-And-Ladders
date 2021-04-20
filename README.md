@@ -30,6 +30,8 @@ This path requires 6 moves and is achieved with probility 2.1433470507544607e-5.
 ```
 The random variable representing the number of moves to complete the game (starting from square 0) follows a discrete phase-type distribution, whose probability mass function and density are saved under `Plots`. 
 
+## Code Credits
+[@kalyaninagaraj](https://github.com/kalyaninagaraj/)
 
 ## Resources
 ### Lecture notes, videos, and book chapters:
